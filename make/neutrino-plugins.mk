@@ -173,7 +173,7 @@ $(D)/neutrino-plugin-scripts-lua: $(D)/bootstrap
 		install -d $(TARGET_SHARE_DIR)/tuxbox/neutrino/webtv
 #		cp -R $(BUILD_TMP)/neutrino-plugin-scripts-lua/ard_mediathek/* $(TARGET_SHARE_DIR)/tuxbox/neutrino/plugins/
 #		cp -R $(BUILD_TMP)/neutrino-plugin-scripts-lua/favorites2bin/* $(TARGET_SHARE_DIR)/tuxbox/neutrino/plugins/
-		cp -R $(BUILD_TMP)/neutrino-plugin-scripts-lua/mtv/* $(TARGET_SHARE_DIR)/tuxbox/neutrino/plugins/
+#		cp -R $(BUILD_TMP)/neutrino-plugin-scripts-lua/mtv/* $(TARGET_SHARE_DIR)/tuxbox/neutrino/plugins/
 #		cp -R $(BUILD_TMP)/neutrino-plugin-scripts-lua/netzkino/* $(TARGET_SHARE_DIR)/tuxbox/neutrino/plugins/
 		cp -R $(BUILD_TMP)/neutrino-plugin-scripts-lua/2webTVxml/* $(TARGET_SHARE_DIR)/tuxbox/neutrino/plugins/
 		cp -R $(BUILD_TMP)/neutrino-plugin-scripts-lua/webtv/best_bitrate_m3u8.lua $(TARGET_SHARE_DIR)/tuxbox/neutrino/webtv/
@@ -348,19 +348,19 @@ $(D)/neutrino-plugin-tierwelt-tv:
 #
 # mtv
 #
-$(D)/neutrino-plugin-mtv:
-	$(START_BUILD)
-	$(REMOVE)/plugins-lua
-	set -e; if [ -d $(ARCHIVE)/plugins-lua.git ]; \
-		then cd $(ARCHIVE)/plugins-lua.git; git pull; \
-		else cd $(ARCHIVE); git clone https://github.com/fs-basis/plugins-lua.git plugins-lua.git; \
-		fi
-	cp -ra $(ARCHIVE)/plugins-lua.git $(BUILD_TMP)/plugins-lua
-	$(CHDIR)/plugins-lua; \
-		install -d $(TARGET_DIR)/var/tuxbox/plugins
-		cp -R $(BUILD_TMP)/plugins-lua/mtv/* $(TARGET_SHARE_DIR)/tuxbox/neutrino/plugins/
-	$(REMOVE)/plugins-lua
-	$(TOUCH)
+#$(D)/neutrino-plugin-mtv:
+#	$(START_BUILD)
+#	$(REMOVE)/plugins-lua
+#	set -e; if [ -d $(ARCHIVE)/plugins-lua.git ]; \
+#		then cd $(ARCHIVE)/plugins-lua.git; git pull; \
+#		else cd $(ARCHIVE); git clone https://github.com/fs-basis/plugins-lua.git plugins-lua.git; \
+#		fi
+#	cp -ra $(ARCHIVE)/plugins-lua.git $(BUILD_TMP)/plugins-lua
+#	$(CHDIR)/plugins-lua; \
+#		install -d $(TARGET_DIR)/var/tuxbox/plugins
+#		cp -R $(BUILD_TMP)/plugins-lua/mtv/* $(TARGET_SHARE_DIR)/tuxbox/neutrino/plugins/
+#	$(REMOVE)/plugins-lua
+#	$(TOUCH)
 
 #
 # neutrino-hd2 plugins
